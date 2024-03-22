@@ -1,0 +1,11 @@
+{
+   "name": "Peace Lab",
+   "version": "1.0.0",
+   "description": "This is a broswer extension that helps to fact check a page for various sort of hate-speech, human rights violations and fake news before you share it",
+   "manifest_version": 3,
+   "author": "Godstime",
+   "action": {
+      "default_popup": "index.html",
+      "default_title": "Peace Lab"
+   }
+}
