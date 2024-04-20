@@ -82,3 +82,26 @@ document.getElementById("monitoringForm").addEventListener("submit", (event) => 
 });
 
 updateHighlight();
+
+// // Image Slider
+// // Get the image slider element
+// const imageSlider = document.getElementById("imageSlider");
+
+// // Function to slide images to the left
+// function slideLeft() {
+//     const firstImage = imageSlider.children[0];
+//     imageSlider.removeChild(firstImage);
+//     imageSlider.appendChild(firstImage);
+// }
+
+// // Function to slide images to the right
+// function slideRight() {
+//     const lastImage = imageSlider.children[imageSlider.children.length - 1];
+//     imageSlider.removeChild(lastImage);
+//     imageSlider.insertBefore(lastImage, imageSlider.children[0]);
+// }
+
+// // Set interval to auto slide
+// setInterval(() => {
+//     slideLeft();
+// }, 2000); 
