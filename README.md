@@ -18,7 +18,7 @@ it is as simple as cloning the github or simply downloading the [zip](https://gi
 1. Clone: git clone `https://github.com/Gtstride/peace_lab.git`
 2. Navigete to the _cd project directory_
 3. Open the project in your favorite editor
-4. Open the `indext.html` file in your web browser to view the applicataion or you use `_live-server_` in your code editor.
+4. Open the `indext.html` file in your web browser to view the applicataion or you use _live-server_ in your code editor.
 
 
 ## Contributing
@@ -32,7 +32,7 @@ it is as simple as cloning the github or simply downloading the [zip](https://gi
 
 ## Roles Needed
 - Graphics Designer
-- UI?UX Designer
+- UI/UX Designer
 - FeullStack Engineer
 - Progrma Manager
 - Developer Writer
