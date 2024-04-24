@@ -30,6 +30,13 @@ it is as simple as cloning the github or simply downloading the [zip](https://gi
 - Create a pull request from your fork to the main repository.
 - Your pull request will be reviewed and merged if approved by the Admin.
 
+## Roles Needed
+- Graphics Designer
+- UI?UX Designer
+- FeullStack Engineer
+- Progrma Manager
+- Developer Writer
+
 
 ## For More Information 
- - Reach Out to Godstime [Gtstride](https://github.com/Gtstride)
+ - Reach Out to [Gtstride](https://github.com/Gtstride)

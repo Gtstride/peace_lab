@@ -1,10 +1,98 @@
+body {
+  background-color: #f0f0f0; /* Light gray background color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.logo {
+    width: 50px; /* Set the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin: 5px; /* Add margin around the logo */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: orange;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Center the content horizontally */
+    align-items: center;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navbar-toggler span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 4px 0;
+    transition: background-color 0.3s;
+}
+
+.navbar-toggler.open span {
+    background-color: transparent;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    display: inline-block; /* Display list items horizontally */
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #ff9900;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items vertically */
+    }
+
+    .navbar li {
+        display: block; /* Display list items vertically */
+        width: 100%;
+    }
+
+    .navbar li a {
+        text-align: center;
+    }
+}
+
+/* Highlighted word styles */
+.highlighted {
+    background-color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+
 footer {
   background-color: #3498db; /* Blue background color */
   color: white; /* Text color */
   text-align: center;
   padding: 20px;
   margin-left: -20px;
-  position: fixed;
+  /* position: fixed; */
+  position: sticky;
   bottom: 0;
   width: 100vw; /* Full width of the viewport */
   display: flex;
@@ -46,30 +134,3 @@ footer .subscribe button {
   border: none;
   cursor: pointer;
 }
-
-/* .image-slider {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  overflow-x: hidden;
-  margin-bottom: 20px;
-}
-
-.image-slider img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.image-slider img {
-  flex: 0 0 auto;
-  width: 100%;
-  transition: transform 0.5s ease;
-}
-
-.image-slider button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-} */

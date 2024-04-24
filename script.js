@@ -1,3 +1,124 @@
+// Navbar
+// const navbarToggler = document.querySelector(".navbar-toggler");
+// const navbarNav = document.querySelector(".navbar-nav");
+
+// navbarToggler.addEventListener("click", () => {
+//   navbarNav.classList.toggle("open");
+//   navbarToggler.classList.toggle("open");
+// });
+
+// function highlightWord() {
+//   var wordToHighlight = document.getElementById("searchInput").value;
+
+//   var textNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+
+//   while (textNodes.nextNode()) {
+//     var node = textNodes.currentNode;
+//     var text = node.nodeValue;
+//     var searchText = wordToHighlight.trim();
+
+//     var re = new RegExp(searchText, "gi");
+//     var replacedText = text.replace(re, '<span class="highlighted">$&</span>');
+
+//     if (replacedText !== text) {
+//       var newNode = document.createElement("span");
+//       newNode.innerHTML = replacedText;
+//       node.parentNode.replaceChild(newNode, node);
+//     }
+//   }
+// }
+
+// Used Before
+// function highlightWord() {
+//   var selectElement = document.getElementById("searchSelect");
+//   var wordToHighlight = selectElement.options[selectElement.selectedIndex].value;
+
+//   var textNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+
+//   while (textNodes.nextNode()) {
+//     var node = textNodes.currentNode;
+//     var text = node.nodeValue;
+//     var searchText = wordToHighlight.trim();
+
+//     var re = new RegExp(searchText, "gi");
+
+//     var replacedText = text.replace(re, '<span class="highlighted">$&</span>');
+
+//     if (replacedText !== text) {
+//       var newNode = document.createElement("span");
+//       newNode.innerHTML = replacedText;
+//       node.parentNode.replaceChild(newNode, node);
+//     }
+//   }
+// }
+
+let highlightedWord = null;
+
+function highlightWord() {
+  // Get the selected word to highlight from the select element
+  let selectElement = document.getElementById("searchSelect");
+  let wordToHighlight = selectElement.options[selectElement.selectedIndex].value;
+
+  // Get all the text nodes on the page
+  const textNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+
+  // Loop through each text node
+  while (textNodes.nextNode()) {
+    let node = textNodes.currentNode;
+    let text = node.nodeValue;
+    let searchText = wordToHighlight.trim();
+
+    // Create a regular expression to match the word (case insensitive)
+    let re = new RegExp(searchText, "gi");
+
+    // Replace all occurrences of the word with a span element to highlight it
+    let replacedText = text.replace(re, '<span class="highlighted">$&</span>');
+
+    // Update the node with the highlighted text
+    if (replacedText !== text) {
+      let newNode = document.createElement("span");
+      newNode.innerHTML = replacedText;
+      node.parentNode.replaceChild(newNode, node);
+    }
+  }
+
+  // Toggle highlighting on and off for the selected word
+  if (highlightedWord === wordToHighlight) {
+    document.querySelectorAll(".highlighted").forEach((element) => {
+      element.outerHTML = element.innerHTML;
+    });
+    highlightedWord = null;
+  } else {
+    highlightedWord = wordToHighlight;
+  }
+}
+
+function highlightCustomWord() {
+  var customWord = document.getElementById("customWord").value;
+
+  if (customWord.trim() === "") {
+    return; // Do nothing if the custom word is empty
+  }
+
+  var textNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+
+  while (textNodes.nextNode()) {
+    var node = textNodes.currentNode;
+    var text = node.nodeValue;
+    var searchText = customWord.trim();
+
+    var re = new RegExp(searchText, "gi");
+
+    var replacedText = text.replace(re, '<span class="highlighted">$&</span>');
+
+    if (replacedText !== text) {
+      var newNode = document.createElement("span");
+      newNode.innerHTML = replacedText;
+      node.parentNode.replaceChild(newNode, node);
+    }
+  }
+}
+
 const saveBtn = document.getElementById("savePreferencesBtn");
 const checkBoxSelected = document.querySelectorAll("input[type=checkbox]");
 const keywordsSelect = document.getElementById("keywords");
@@ -43,7 +164,7 @@ keywordsSelect.addEventListener("change", () => {
 document.addEventListener("DOMContentLoaded", function () {
   const chatbox = document.querySelector("df-messenger");
   chatbox.open();
-  console.log('Chatbox opened', chatbox);
+  console.log("Chatbox opened", chatbox);
 });
 
 document.getElementById("monitoringForm").addEventListener("submit", (event) => {
@@ -104,4 +225,4 @@ updateHighlight();
 // // Set interval to auto slide
 // setInterval(() => {
 //     slideLeft();
-// }, 2000); 
+// }, 2000);
