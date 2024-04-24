@@ -1,5 +1,5 @@
 # Peace Lab
-##
+
 _A web extension that helps users track violent extremism on online platforms, and fact-check news, especially during elections and beyond, using OSINT (Open Source Investigative Technology) tools. So, it is a web browser extension for Fact-Checking and a Real-Time Chatbot Fact-checking tool, ensuring an open safe civic space for all._
 
 ## Installation
@@ -36,7 +36,6 @@ it is as simple as cloning the github or simply downloading the [zip](https://gi
 - FeullStack Engineer
 - Progrma Manager
 - Developer Writer
-
 
 ## For More Information 
  - Reach Out to [Gtstride](https://github.com/Gtstride)
