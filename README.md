@@ -15,7 +15,7 @@ it is as simple as cloning the github or simply downloading the [zip](https://gi
 
 ## Setup
 
-1. ###Clone: git clone https://github.com/Gtstride/peace_lab.git
+1. Clone: git clone https://github.com/Gtstride/peace_lab.git
 2. Navigete to the _cd project directory_
 3. Open the project in your favorite editor
 4. Open the `indext.html` file in your web browser to view the applicataion or you use _live-server_ in your code editor.
@@ -32,4 +32,4 @@ it is as simple as cloning the github or simply downloading the [zip](https://gi
 
 
 ## For More Information 
- - Reach Out to `Godstime[Gtstride](https://github.com/Gtstride)`
+ - Reach Out to Godstime [Gtstride](https://github.com/Gtstride)
